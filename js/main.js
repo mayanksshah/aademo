@@ -314,7 +314,7 @@ document.querySelectorAll(
 ".hero-slide"
 );
 
-let current = 0;
+let current=0;
 
 setInterval(()=>{
 
@@ -323,7 +323,7 @@ slides[current]
 "active"
 );
 
-current =
+current=
 (current+1)
 %
 slides.length;
