@@ -304,9 +304,12 @@ window.addEventListener('scroll', () => {
 HERO IMAGE SLIDER
 ===================== */
 
+
+
+
 document.addEventListener(
 "DOMContentLoaded",
-function(){
+()=>{
 
 const slides =
 document.querySelectorAll(
@@ -315,31 +318,22 @@ document.querySelectorAll(
 
 let current = 0;
 
-function showNext(){
+setInterval(()=>{
 
 slides[current]
 .classList.remove(
 "active"
 );
 
-current++;
-
-if(
-current >= slides.length
-){
-current = 0;
-}
+current =
+(current+1)
+% slides.length;
 
 slides[current]
 .classList.add(
 "active"
 );
 
-}
-
-setInterval(
-showNext,
-5000
-);
+},5000);
 
 });
