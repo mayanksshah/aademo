@@ -331,121 +331,119 @@ strong { color: var(--text); font-weight: 700; }
 .nav-toggle { display: none; flex-direction: column; gap: 5px; width: 26px; position: relative; z-index: 2; }
 .nav-toggle span { display: block; height: 1.5px; background: #fff; border-radius: 1px; transition: var(--transition); }
 
-/* ─────────────────────────────────────────────
-   HERO
-───────────────────────────────────────────── */
 /* ==========================
-HERO SLIDER
+HERO
 ========================== */
 
 .hero{
 position:relative;
-min-height:100vh;
+height:100vh;
+overflow:hidden;
 display:flex;
 align-items:center;
-overflow:hidden;
-padding-top:72px;
 }
 
-/* background container */
 .hero-bg{
 position:absolute;
-inset:0;
+top:0;
+left:0;
+width:100%;
+height:100%;
 overflow:hidden;
 z-index:0;
 }
 
-/* each slide */
 .hero-slide{
+
 position:absolute;
+
+top:0;
+left:0;
+
 width:100%;
 height:100%;
+
 opacity:0;
+
 transition:
-opacity 1.8s ease,
+opacity 1.5s ease,
 transform 8s ease;
 
 transform:scale(1);
+
 }
 
-/* active slide */
 .hero-slide.active{
+
 opacity:1;
 z-index:1;
-transform:scale(1.06);
+
+transform:scale(1.05);
+
 }
 
-/* image */
 .hero-slide img{
+
 width:100%;
 height:100%;
+
 object-fit:cover;
-object-position:center;
+
+display:block;
+
 }
 
-/* overlay */
 .hero-overlay{
+
 position:absolute;
-inset:0;
-z-index:2;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
 
 background:
+
 linear-gradient(
 135deg,
-rgba(26,92,56,.88) 0%,
-rgba(26,18,8,.68) 60%,
-rgba(196,64,26,.12) 100%
+rgba(26,92,56,.82),
+rgba(26,18,8,.65)
 );
+
+z-index:2;
+
 }
 
 .hero-content{
+
 position:relative;
 z-index:5;
-padding:80px 32px 90px;
-}
 
-.hero-badge{
-display:inline-flex;
-gap:8px;
-margin-bottom:26px;
-color:#fff;
+color:white;
+
+padding-top:80px;
+
 }
 
 .hero-headline{
-color:#fff;
-max-width:800px;
-margin-bottom:24px;
+
+color:white;
+
 }
 
 .hero-sub{
-color:rgba(255,255,255,.82);
-max-width:520px;
-margin-bottom:44px;
+
+color:
+rgba(255,255,255,.85);
+
 }
 
 .hero-actions{
+
 display:flex;
-gap:14px;
-margin-bottom:52px;
-flex-wrap:wrap;
-}
+gap:15px;
 
-.hero-proof{
-display:flex;
-align-items:center;
-gap:14px;
-}
-
-.hero-scroll{
-position:absolute;
-bottom:32px;
-left:50%;
-transform:translateX(-50%);
-z-index:5;
-}
-
-.hero-doodles{
-display:none;
 }
 /* ─────────────────────────────────────────────
    MARQUEE STRIPS
