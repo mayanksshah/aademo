@@ -307,14 +307,14 @@ HERO IMAGE SLIDER
 
 document.addEventListener(
 "DOMContentLoaded",
-()=>{
+function(){
 
 const slides =
 document.querySelectorAll(
 ".hero-slide"
 );
 
-let current=0;
+let current = 0;
 
 setInterval(()=>{
 
@@ -323,8 +323,8 @@ slides[current]
 "active"
 );
 
-current=
-(current+1)
+current =
+(current + 1)
 %
 slides.length;
 
