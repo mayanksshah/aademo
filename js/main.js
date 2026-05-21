@@ -305,8 +305,6 @@ HERO IMAGE SLIDER
 ===================== */
 
 
-
-
 document.addEventListener(
 "DOMContentLoaded",
 ()=>{
@@ -327,7 +325,8 @@ slides[current]
 
 current =
 (current+1)
-% slides.length;
+%
+slides.length;
 
 slides[current]
 .classList.add(
