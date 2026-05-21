@@ -334,66 +334,124 @@ strong { color: var(--text); font-weight: 700; }
 /* ==========================
 HERO
 ========================== */
+/* ==========================
+HERO SECTION
+========================== */
+
 .hero{
 position:relative;
 height:100vh;
 overflow:hidden;
 display:flex;
 align-items:center;
+justify-content:center;
 }
 
+/* Background area */
 .hero-bg{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:0;
 overflow:hidden;
+z-index:0;
 }
+
+
+/* Individual slides */
 
 .hero-slide{
 position:absolute;
+top:0;
+left:0;
+
 width:100%;
 height:100%;
-opacity:0;
 
+opacity:0;
 transition:
 opacity 1.5s ease,
 transform 8s ease;
 
 transform:scale(1);
+
+z-index:1;
 }
+
+
+/* Active image */
 
 .hero-slide.active{
 opacity:1;
-transform:scale(1.05);
+transform:scale(1.08);
+z-index:2;
 }
+
+
+/* Image fit */
 
 .hero-slide img{
 width:100%;
 height:100%;
 object-fit:cover;
+display:block;
 }
+
+
+/* Overlay */
 
 .hero-overlay{
 position:absolute;
+top:0;
+left:0;
+
 width:100%;
 height:100%;
+
 background:
+
 linear-gradient(
-135deg,
-rgba(16,60,40,.7),
+90deg,
+rgba(0,50,25,.65),
 rgba(0,0,0,.35)
 );
-z-index:2;
+
+z-index:3;
 }
 
-.hero-content,
-.hero-doodles,
-.hero-scroll{
+
+/* Hero text */
+
+.hero-content{
 position:relative;
-z-index:5;
+z-index:10;
+
+max-width:1200px;
+margin:auto;
+
+color:white;
+}
+
+
+/* Keep doodles visible */
+
+.hero-doodles{
+position:absolute;
+z-index:11;
+}
+
+
+/* Scroll indicator */
+
+.hero-scroll{
+position:absolute;
+bottom:40px;
+left:50%;
+
+transform:translateX(-50%);
+z-index:20;
+color:white;
 }
 /* ─────────────────────────────────────────────
    MARQUEE STRIPS
