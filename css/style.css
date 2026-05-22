@@ -428,7 +428,51 @@ margin-top:35px;
 }
 
 
+/* HERO PROOF */
+
 .hero-proof{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:30px;
+    color:#fff;
+    font-size:15px;
+}
+
+.proof-avatars{
+    display:flex;
+    align-items:center;
+}
+
+/* THIS FIXES THE HUGE IMAGE ISSUE */
+.proof-avatars img{
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:2px solid white;
+
+    margin-left:-12px;
+
+    background:#fff;
+}
+
+/* first avatar no overlap */
+.proof-avatars img:first-child{
+    margin-left:0;
+}
+
+.hero-proof span{
+    color:white;
+    font-size:15px;
+}
+
+.hero-proof strong{
+    color:#fff;
+}.hero-proof{
 
 margin-top:35px;
 
